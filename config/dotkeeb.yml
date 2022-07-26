@@ -1,0 +1,13 @@
+file_format: "1"
+id: dotkeeb
+name: dotKeeb
+type: shield
+url: https://github.com/MdotAmaan/dotKeeb
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - dotkeeb_left
+  - dotkeeb_right

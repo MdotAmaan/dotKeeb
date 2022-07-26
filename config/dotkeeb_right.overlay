@@ -1,0 +1,16 @@
+#include "dotkeeb.dtsi" // Notice that the main dtsi files are included in the overlay.
+
+&default_transform { // The matrix transform for this board is 6 columns over because the left half is 6 columns wide according to the matrix.
+    col-offset = <6>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 4 GPIO_ACTIVE_HIGH> // col1 in the schematic
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH> // col2 in the schematic
+        , <&pro_micro 6 GPIO_ACTIVE_HIGH> // col3 in the schematic
+        , <&pro_micro 7 GPIO_ACTIVE_HIGH> // col4 in the schematic
+        , <&pro_micro 8 GPIO_ACTIVE_HIGH> // col5 in the schematic
+        , <&pro_micro 9 GPIO_ACTIVE_HIGH> // col6 in the schematic
+        ;
+};

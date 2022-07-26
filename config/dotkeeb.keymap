@@ -1,0 +1,84 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define DEFUALT 0
+#define UPPER 1
+#define LOWER 2
+#define BOTH 3
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |   ESC   |    Q    |    W    |    F    |    P    |    B    |                                          |    Y    |    U    |    I    |    O    |    P    |    \    |
+// |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
+// |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |                                          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
+//           |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |                                          |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |
+//                                         |  SPACE  | ESCAPE  |                                          |  RETURN |  SPACE  |
+            bindings = <
+    &kp ESC    &kp Q    &kp W      &kp E    &kp R     &kp T                                                 &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSPC
+    &kp TAB    &kp A    &kp S      &kp D    &kp F     &kp G                                                 &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp SQT
+    &kp LSHIFT &kp Z    &kp X      &kp C    &kp V     &kp B                                                 &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp RET
+               &kp LEFT &kp RIGHT  &kp LALT &mo LOWER &kp LGUI                                              &kp SPACE &mo UPPER &kp RCTRL &kp DOWN &kp UP
+                                            &kp ESC   &kp TAB                                               &kp RET   &kp BSPC
+            >;
+
+        };
+
+        upper_layer {
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    \    |
+// |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
+// |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |                                          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
+//           |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |                                          |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |
+//                                         |  SPACE  | ESCAPE  |                                          |  RETURN |  SPACE  |
+            bindings = <
+    &none      &none    &none      &none    &none     &none                                                 &reset      &kp N7    &kp N8    &kp N9   &out OUT_BLE  &kp BSPC
+    &none      &none    &none      &kp LPAR &kp RPAR  &kp LBRC                                              &kp RBRC    &kp N4    &kp N5    &kp N6   &kp SEMI  &kp SQT
+    &none      &none    &none      &kp LBKT &kp RBKT  &none                                                 &bootloader &kp N1    &kp N2    &kp N3   &kp FSLH  &kp RET
+               &kp LEFT &kp RIGHT  &kp LALT &mo BOTH  &kp LGUI                                              &kp SPACE   &mo UPPER &kp RCTRL &kp N0   &kp DOT
+                                            &kp ESC   &kp TAB                                               &kp RET   &kp BSPC
+            >;
+
+        };
+
+
+        lower_layer {
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    \    |
+// |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
+// |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |                                          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
+//           |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |                                          |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |
+//                                         |  SPACE  | ESCAPE  |                                          |  RETURN |  SPACE  |
+            bindings = <
+    &kp GRAVE  &kp EXCL   &kp AT     &kp HASH &kp DLLR  &kp PRCNT                                           &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
+    &kp TAB    &none      &none      &none    &none     &reset                                              &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp MINUS &kp EQUAL
+    &kp LSHIFT &none      &none      &none    &out OUT_BLE     &bootloader                                         &none     &none     &none     &none     &kp BSLH  &kp RET
+               &bt BT_CLR &bt BT_NXT &kp LALT &mo LOWER &kp LGUI                                            &kp SPACE &mo BOTH  &kp RCTRL &kp DOWN  &kp UP
+                                              &kp ESC   &kp TAB                                             &kp RET   &kp BSPC
+            >;
+
+        };
+
+        both_layer {
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |   ESC   |    Q    |    W    |    E    |    R    |    T    |                                          |    Y    |    U    |    I    |    O    |    P    |    \    |
+// |   TAB   |    A    |    S    |    D    |    F    |    G    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
+// |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |                                          |    N    |    M    |    ,    |    .    |    /    |  R CTRL |
+//           |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |                                          |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |
+//                                         |  SPACE  | ESCAPE  |                                          |  RETURN |  SPACE  |
+            bindings = <
+    &none       &none      &none    &none      &none     &none                                               &none     &bt BT_PRV   &bt BT_NXT   &none    &none  &none
+    &none       &none      &none    &none      &none     &none                                               &none     &kp K_VOL_DN &kp K_VOL_UP &none    &none  &none
+    &none       &none      &none    &none      &none     &none                                               &none     &none        &kp COMMA    &none    &none  &none
+                &kp LEFT &kp RIGHT  &kp LALT   &mo BOTH  &kp LGUI                                            &kp SPACE &mo BOTH     &kp RCTRL    &kp DOWN &kp UP
+                                               &kp ESC   &kp TAB                                             &kp RET   &kp BSPC
+            >;
+
+        };
+    };
+};
