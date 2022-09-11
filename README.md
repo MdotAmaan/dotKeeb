@@ -1,5 +1,5 @@
 # dotKeeb
-A dactyl-based, split ergonomic keyboard with a wireless focus.
+A wireless, low profile ergonomic keyboard inspired by the dactyl. 
 
 ![Render](assets/render.png)
 
