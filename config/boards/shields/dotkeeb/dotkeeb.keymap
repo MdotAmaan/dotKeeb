@@ -9,7 +9,7 @@
 #define L2 3
 #define SYS 4
 
-/ {
+/ {  
     combos {
         compatible = "zmk,combos";
         combo_sys {
@@ -27,7 +27,7 @@
 // |   TAB   |    A    |    R    |    S    |    T    |    G    |                                          |    M    |    N    |    E    |    I    |    O    |    '    |
 // |   CTRL  |    Z    |    X    |    C    |    D    |    V    |                                          |    K    |    H    |    ,    |    .    |    /    |   GAME  |
 //           |    -    |    =    |   ALT   |  SHIFT  |  SPACE  |                                          |    L2   |  RETURN |   BSPC  |    [    |    ]    |
-//                                         |   GUI   |    L1   |                                          |    L1   |  DELETE |
+//                               |   GUI   |    L1   |                                                              |    L1   |  DELETE |
             bindings = <
     &kp ESC    &kp Q     &kp W     &kp F     &kp P     &kp B                                                 &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSLH
     &kp TAB    &kp A     &kp R     &kp S     &kp T     &kp G                                                 &kp M     &kp N     &kp E     &kp I    &kp O     &kp SQT
@@ -43,13 +43,13 @@
 // |    G    |  SHIFT  |    A    |    S    |    D    |    F    |                                          |    H    |    J    |    K    |    L    |    ;    |    '    |
 // |    B    |   CTRL  |    Z    |    X    |    C    |    V    |                                          |    N    |    M    |    ,    |    .    |    /    |   GAME  |
 //           |    `    |   TAB   |   ALT   |  SHIFT  |  SPACE  |                                          |    L2   |  RETURN |   BSPC  |    [    |    ]    |
-//                                         |   GUI   |    L1   |                                          |    L1   |  DELETE |
+//                               |   GUI   |    L1   |                                                              |    L1   |  DELETE |
             bindings = <
      &kp T      &kp ESC   &kp Q     &kp W     &kp E     &kp R                                               &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSLH
      &kp G      &kp LSHFT &kp A     &kp S     &kp D     &kp G                                               &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp SQT
      &kp B      &kp LCTRL &kp Z     &kp X     &kp C     &kp V                                               &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH  &tog 1
                 &kp GRAVE &kp TAB   &kp SPACE &kp I     &kp O                                               &mo 3     &kp RET   &kp BSPC  &kp LBKT &kp RBKT
-                                              &kp J     &mo 2                                               &mo 2     &kp DEL
+                                    &kp J     &mo 2                                                                   &mo 2     &kp DEL
             >;
 
         };
@@ -60,13 +60,13 @@
 // |   CTRL  |    A    |    R    |    S    |    T    |    G    |                                          |    M    |    N    |    E    |    I    |    O    |    '    |
 // |         |    Z    |    X    |    C    |    D    |    V    |                                          |    K    |    H    |    ,    |    .    |    /    |         |
 //           |    -    |    =    |   ALT   |  SHIFT  |  SPACE  |                                          |    L2   |  RETURN |   BSPC  |    [    |    ]    |
-//                                         |   GUI   |    L1   |                                          |    L1   |  DELETE |
+//                               |   GUI   |    L1   |                                                              |    L1   |  DELETE |
             bindings = <
     &kp F1     &kp F2       &kp F3       &kp F4     &kp F5       &kp F6                                     &kp F7    &kp F8    &kp F9    &kp F10  &kp F11   &kp F12
     &kp LCTRL  &kp N1       &kp N2       &kp N3     &kp N4       &kp N5                                     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &none
     &caps_word &none        &kp C_PP     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP                               &kp HOME  &kp PG_UP &kp PG_DN &kp END  &none     &none
                &kp C_AL_WWW &kp C_AL_CALC &kp SPACE &kp LSHFT    &kp LALT                                   &mo 3     &kp RET   &kp BSPC  &kp C_AC_BACK &kp C_AC_FORWARD
-                                                    &kp LGUI     &mo 2                                      &mo 2     &kp DEL
+                                         &kp LGUI     &mo 2                                                           &mo 2     &kp DEL
             >;
 
         };
@@ -84,7 +84,7 @@
      &trans     &trans    &trans    &trans   &trans   &trans                                             &kp C_AC_SCROLL_UP   &kp LEFT  &kp DOWN  &kp RIGHT &trans  &trans
      &trans     &trans    &trans    &trans   &trans   &trans                                             &kp C_AC_SCROLL_DOWN &trans    &trans    &trans    &trans  &trans
                 &trans    &trans    &trans   &trans   &trans                                             &trans               &trans    &trans    &trans    &trans
-                                             &trans   &trans                                             &trans               &trans
+                                    &trans   &trans                                                                           &trans    &trans
             >;
 
         };
