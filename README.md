@@ -10,34 +10,34 @@ ToDo :
 
 ![Render](assets/render.png)
 
-## Parts list
-Here are the parts used in this build, along with links to where I purchased them from. I'd encourage you to try and get as much stuff from local vendors if possible.
+## Part list
+Here are the parts used in this build, along with links to where I purchased them from. I'd encourage you to try and get as much stuff from local vendors if possible. Note that the quantities listed are for building 2 halves.
 
-- 50x Kailh choc switches and keycaps (MX-style switches are NOT compatible)
-- 50x Kailh choc V1 hotswap sockets (Required for the hotswap version)
-- 50x THT diodes
-- 2x nice!nano microcontrollers
-- 2x LiPo* batteries (100mAh is generally considered the minimum capacity)
-- Wiring (I used 24 guage, single-core wire) You can use pretty much whatever you feel comfortable working with)
-- 4x 4mm M3 heat-set screw inserts
-- 4x 6mm M3 screws
-- (Optional)** 2x nice!view displays
-- (Optional)*** 2X Power switch
-- (Optional)**** 6x small rubber feet
+| Required | Quantity | Part                          | Notes                                                                            |
+| -------- | -------- | ----------------------------- | -------------------------------------------------------------------------------- |
+| ✓        | 50       | **Kailh Choc V1 Switch**      |                                                                                  |
+| ✓        | 50       | **Choc V1 Compatible Keycap** | I used MBK keycaps for my build. Other choc keycaps should also work             |
+| ✓        | 50       | **Choc V1 Hotswap Socket**    | These are only required if you build using the hotswap model                     |
+| ✓        | 50       | **THT Diode**                 |                                                                                  |
+| ✓        | 2        | **nice!nano Microcontroller** |                                                                                  |
+| ✓        | 2        | **>100mAh LiPo Battery**      | LiPo batteries are the recommended type of batteries for use with the nice!nanos. You can still use and charge Li-ion batteries, but you may run into some issues. I personally use the Li-ion batteries I took out of my old Playstation Move controllers and they work fine.|
+| ✓        | 8        | **4mm M3 Heat-set Insert**    |                                                                                  |
+| ✓        | 8        | **5mm M3 Screws**             |                                                                                  |
+| ✓        | ~1.5m    | **Wire**                      | I used 24 AWG wire, but you can use whatever you are comfortable working with    |
+| ⨯        | 2        | nice!view Display             | You could go without displays or use a 128x32 OLED module if you prefer (will result in much greater power consumption), however the cutout is made to fit the nice!views, which are slightly wider, so there will be some gaps |
+| ⨯        | 2        | Power Switch                  | ZMK's sleep actually does a very good job of putting the keyboard to sleep and saving power, so these aren't necessary. However if you want to carry the keyboard in a bag or another place where accidental keypresses could occur, then a switch may be useful. |
+| ⨯        | 12       | Small Rubber Feet             | These are to make sure the keybaord doenst slide around on your table, there are many other ways to acheive this too |
 
-\* You could put in OLED displays instead of nice!views, although there would be some empty spaces in the slot. You could also run without displays at all. OLEDs will have much greater power consumption and so I'd recommend using much larger batteries for those.
-
-\** LiPo batteries are the recommended type of batteries for use with the nice!nanos. You can still use and charge Li-ion batteries, but you may run into some issues. I personally use the Li-ion batteries I took out of my old Playstation Move controllers and they work fine.
-If you want to use NiMH (Most commonly found as AA or AAA rechargeables), **DO NOT** plug in the usb with the batteries connected. You will have to charge them externally.
-
-\*** The linked power switch is what the case was designed for. Others may not fit right. You could also forgo a power switch and rely on ZMK sleep, which is a valid option if you dont throw your keyboard into a bag or other place where keys can accidentally get pressed and wake the keyboard.
-
-\**** You can use whatever method you want to get your keyboard to grip your table better. The linked rubber pads are what the plate was designed for
-
+The total part cost can range anywhere between $150 to $200 depending on various factors.   
 ## Tools
 
-- Soldering Iron - You don't need anything too fancy, just avoid those $10 kits. I used the Sequre D60 (TODO: link here)
-- Solder - Use leaded solder if you can, it will make things significantly easier. I used 60/40 solder.
-- Wire cutter / stripper - You could also use a pair of scissors but I wouldn't recommend it
-- (Optional) Tweezers
-- (optional) 3D printer - I say a printer is optional since you can make use of several online printing services if you don't own a printer, like JLCPCB. I used an Ender 3 V2, but depending on your region you may be able to find better printers that are also cheaper.
+| Tool                         | Notes                                                                                |
+| ---------------------------- | -----------------------------------------------------------------------------------  |
+| 3D Printer                   | Services like JLCPCB can be used to print the models if you don't own a 3D printer.  |
+| Soldering Iron & solder      |                                                                                      |
+| Wire cutter                  |                                                                                      |
+| Tweezers                     | Optional. Having a pair can come in handy                                            |    
+
+## Build Guide
+
+
