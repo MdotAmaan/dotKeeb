@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT 0
 #define GAME 1
@@ -49,7 +50,7 @@
             bindings = <
     &kp ESC    &kp Q     &kp W     &kp F      &kp P           &kp B                                         &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSLH
     &kp TAB    &kp A     &kp R     &kp S      &kp T           &kp G                                         &kp M     &kp N     &kp E     &kp I    &kp O     &kp SQT
-    &kp CARET  &kp Z     &kp X     &kp C      &kp D           &kp V                                         &kp K     &kp H     &kp COMMA &kp DOT  &kp FSLH  &caps_word
+    &kp TILDE  &kp Z     &kp X     &kp C      &kp D           &kp V                                         &kp K     &kp H     &kp COMMA &kp DOT  &kp FSLH  &caps_word
                &kp MINUS &kp EQUAL &td0       &mt LCTRL SPACE &kp LGUI                                      &kp RET   &kp BSPC  &td1      &kp LBKT &kp RBKT
                                    &kp LSHIFT &kp LALT                                                                &kp DEL   &td0
             >;
@@ -69,7 +70,7 @@
             bindings = <
     &none           &kp F1         &kp F2         &kp F3     &kp F4       &kp F5                           &kp F6    &kp F7    &kp F8    &kp F9        &kp F10   &kp F11
     &kp LG(LS(S))   &kp N1         &kp N2         &kp N3     &kp N4       &kp N5                           &kp N6    &kp N7    &kp N8    &kp N9        &kp N0    &kp F12
-    &kp LC(LA(DEL)) &kp LG(Q)      &kp C_PP       &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP                     &none     &none     &none     &none         &none     &none
+    &kp LC(LA(DEL)) &kp LA(F4)      &kp C_PP       &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP                     &none     &none     &none     &none         &none     &none
                   &kp C_AC_BACK  &kp C_AC_FORWARD &trans     &trans       &trans                           &trans    &trans    &trans    &kp C_AC_BACK &kp C_AC_FORWARD
                                                   &trans     &trans                                                  &trans    &trans
             >;
@@ -89,7 +90,7 @@
             bindings = <
      &bt BT_CLR  &none        &none        &none        &none        &none                               &none   &none     &none    &none     &none  &none
      &reset      &out OUT_TOG &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &none                               &none   &none     &none    &none     &none  &reset
-     &bootloader &none        &none        &none        &none        &none                               &none   &none     &none    &none     &none  &bootloader
+     &bootloader &none        &none        &none        &ext_power EP_OFF &ext_power EP_ON               &ext_power EP_OFF &ext_power EP_ON   &none  &none     &none  &bootloader
                  &none        &none        &trans       &trans       &trans                              &trans  &trans    &trans   &none     &none
                                                         &trans       &trans                              &trans  &trans
             >;
