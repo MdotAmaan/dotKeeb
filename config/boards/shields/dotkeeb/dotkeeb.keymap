@@ -18,6 +18,11 @@
             key-positions = <38 39 40>;
             bindings = <&tog 4>;
         };
+        combo_game {
+            timeout-ms = <50>;
+            key-positions = <3 14 15 16>;
+            bindings = <&tog 1>;
+        };
     };
     behaviors {
         td0: tap_dance_l1 {
@@ -25,7 +30,7 @@
             label = "TAP_DANCE_L1";
             #binding-cells = <0>;
             tapping-term-ms = <350>;
-            bindings = <&mo 2>, <&tog 2>, <&tog 1>;
+            bindings = <&mo 2>, <&tog 2>;
         };
 
         td1: tap_dance_l2 {
@@ -70,7 +75,7 @@
             bindings = <
     &none           &kp F1         &kp F2         &kp F3     &kp F4       &kp F5                           &kp F6    &kp F7    &kp F8    &kp F9        &kp F10   &kp F11
     &kp LG(LS(S))   &kp N1         &kp N2         &kp N3     &kp N4       &kp N5                           &kp N6    &kp N7    &kp N8    &kp N9        &kp N0    &kp F12
-    &kp LC(LA(DEL)) &kp LA(F4)      &kp C_PP       &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP                     &none     &none     &none     &none         &none     &none
+    &kp LC(LA(DEL)) &kp LA(F4)     &kp C_PP       &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP                     &none     &none     &none     &none         &none     &none
                   &kp C_AC_BACK  &kp C_AC_FORWARD &trans     &trans       &trans                           &trans    &trans    &trans    &kp C_AC_BACK &kp C_AC_FORWARD
                                                   &trans     &trans                                                  &trans    &trans
             >;
@@ -90,7 +95,7 @@
             bindings = <
      &bt BT_CLR  &none        &none        &none        &none        &none                               &none   &none     &none    &none     &none  &none
      &reset      &out OUT_TOG &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &none                               &none   &none     &none    &none     &none  &reset
-     &bootloader &none        &none        &none        &ext_power EP_OFF &ext_power EP_ON               &ext_power EP_OFF &ext_power EP_ON   &none  &none     &none  &bootloader
+     &bootloader &none        &none        &none        &ext_power EP_OFF &ext_power EP_ON               &none   &none     &none    &none     &none  &bootloader
                  &none        &none        &trans       &trans       &trans                              &trans  &trans    &trans   &none     &none
                                                         &trans       &trans                              &trans  &trans
             >;
