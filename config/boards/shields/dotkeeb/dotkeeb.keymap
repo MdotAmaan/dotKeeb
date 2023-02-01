@@ -20,7 +20,7 @@
         };
         combo_game {
             timeout-ms = <50>;
-            key-positions = <3 14 15 16>;
+            key-positions = <3 15>;
             bindings = <&tog 1>;
         };
     };
@@ -32,13 +32,22 @@
             tapping-term-ms = <350>;
             bindings = <&mo 2>, <&tog 2>;
         };
-
         td1: tap_dance_l2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_L2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo 3>, <&tog 3>;
+        };
+        qt_bl: bl-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BALANCED_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&mo>, <&kp>;
         };
 
     };
@@ -53,11 +62,11 @@
 //           |    -    |    =    |   L1    |  SPACE  |   GUI   |                                          | RETURN  |   BSPC  |   L2    |    [    |    ]    |
 //                               |  SHIFT  |   LALT  |                                                              |    DEL  |   L1    |
             bindings = <
-    &kp ESC    &kp Q     &kp W     &kp F      &kp P           &kp B                                         &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSLH
-    &kp TAB    &kp A     &kp R     &kp S      &kp T           &kp G                                         &kp M     &kp N     &kp E     &kp I    &kp O     &kp SQT
-    &kp TILDE  &kp Z     &kp X     &kp C      &kp D           &kp V                                         &kp K     &kp H     &kp COMMA &kp DOT  &kp FSLH  &caps_word
-               &kp MINUS &kp EQUAL &td0       &mt LCTRL SPACE &kp LGUI                                      &kp RET   &kp BSPC  &td1      &kp LBKT &kp RBKT
-                                   &kp LSHIFT &kp LALT                                                                &kp DEL   &td0
+    &kp ESC    &kp Q     &kp W     &kp F        &kp P        &kp B                                      &kp J     &kp L     &kp U     &kp Y    &kp SEMI  &kp BSLH
+    &kp TAB    &kp A     &kp R     &kp S        &kp T        &kp G                                      &kp M     &kp N     &kp E     &kp I    &kp O     &kp SQT
+    &kp GRAVE  &kp Z     &kp X     &kp C        &kp D        &kp V                                      &kp K     &kp H     &kp COMMA &kp DOT  &kp FSLH  &caps_word
+               &kp MINUS &kp EQUAL &mt L1 SPACE &kp LCTRL &kp LGUI                                   &kp RET   &kp BSPC  &td1      &kp LBKT &kp RBKT
+                                   &kp LSHIFT   &kp LALT                                                          &kp DEL   &td0
             >;
         };
 
@@ -66,7 +75,7 @@
      &kp L      &kp ESC   &kp Q     &kp W     &kp E     &kp R                                               &kp Y     &kp U     &kp I     &kp O    &kp P     &kp BSLH
      &kp J      &kp LSHFT &kp A     &kp S     &kp D     &kp F                                               &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp SQT
      &kp B      &kp LCTRL &kp Z     &kp X     &kp C     &kp V                                               &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH  &caps_word
-                &kp Y     &kp O     &td0      &kp SPACE &kp T                                               &trans    &trans    &trans    &kp LBKT &kp RBKT
+                &kp Y     &kp O     &mo 2     &kp SPACE &kp T                                               &trans    &trans    &trans    &kp LBKT &kp RBKT
                                     &kp V     &kp M                                                                   &trans    &trans
             >;
         };
